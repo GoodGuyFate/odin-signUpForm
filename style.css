@@ -170,7 +170,7 @@ form input {
 .password input:focus:valid,
 .password-confirm input:focus:valid,
 .email input:focus:valid {
-  border: 1px solid #00ff15;
+  border: 1.5px solid #00ff15;
   outline: none;
   box-shadow: 0 0 5px rgba(0, 255, 21, 0.2);
 }
@@ -178,9 +178,17 @@ form input {
 .password input:focus:invalid,
 .password-confirm input:focus:invalid,
 .email input:focus:invalid {
-  border: 1px solid #ff0000;
+  border: 1.5px solid #ff0000;
   outline: none;
   box-shadow: 0 0 5px rgba(255, 0, 0, 0.2);
+}
+
+.first-name input:focus,
+.last-name input:focus,
+.phone-number input:focus {
+  border: 2px solid #829bce;
+  outline: none;
+  box-shadow: 0 0 5px rgba(83, 140, 213, 0.2);
 }
 
 .button-container {
