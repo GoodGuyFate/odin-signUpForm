@@ -11,7 +11,8 @@
 
 @font-face {
   font-family: norse;
-  src: url("/fonts/Norse.woff2") format("woff2"),
+  src:
+    url("/fonts/Norse.woff2") format("woff2"),
     url("/fonts/Norse.woff") format("woff");
   font-weight: normal;
   font-style: normal;
@@ -37,7 +38,6 @@ a {
 .background-image-container {
   position: relative;
   height: 100dvh;
-  /* border: solid 2px red; */
   flex: 0 0 30%;
   min-width: 300px;
   overflow: hidden;
@@ -89,17 +89,15 @@ a {
   flex: 1;
   height: 100dvh;
   overflow-y: auto;
-  border: red 2px solid;
-  background-color: #eceef1;
-
+  background-color: #eef3fa;
+  font-family: "Roboto";
+  font-weight: bold;
 }
 
 .header {
   margin-top: 150px;
   font-size: 1.7rem;
   max-width: 55ch;
-  font-family: "roboto";
-  font-weight: bold;
   padding-left: 50px;
 }
 
@@ -112,11 +110,123 @@ a {
   margin-top: 30px;
   margin-bottom: 60px;
 }
+
 .form-container {
   display: flex;
   width: 100%;
-  height: 30%;
+  min-width: fit-content;
   background: white;
-  /* border: 2px solid black; */
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow:
+    0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding-left: 50px;
+  padding-top: 20px;
+  padding-bottom: 45px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+form .header-container {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
+}
+
+.form-elements-row-1-container,
+.form-elements-row-2-container,
+.form-elements-row-3-container {
+  display: flex;
+  gap: 70px;
+}
+
+.first-name,
+.last-name,
+.email,
+.phone-number,
+.password,
+.password-confirm {
+  display: flex;
+  flex-direction: column;
+  letter-spacing: 1.5px;
+  font-size: 0.9rem;
+}
+
+form input {
+  width: 270px;
+  height: 35px;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+
+.password input:focus:valid,
+.password-confirm input:focus:valid,
+.email input:focus:valid {
+  border: 1px solid #00ff15;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 255, 21, 0.2);
+}
+
+.password input:focus:invalid,
+.password-confirm input:focus:invalid,
+.email input:focus:invalid {
+  border: 1px solid #ff0000;
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.2);
+}
+
+.button-container {
+  padding-left: 50px;
+  margin-top: 30px;
+  flex-shrink: 0;
+}
+
+.button-container button {
+  font-size: 1.2rem;
+  border: none;
+  background-color: #596d48;
+  color: white;
+  border-radius: 7px;
+  padding-left: 45px;
+  padding-right: 45px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  min-width: max-content;
+}
+
+.button-container button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.button-container button:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.login-container {
+  padding-left: 50px;
+  margin-top: 30px;
+}
+
+.login-container a {
+  text-decoration: none;
+  color: #596d48;
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.login-container a:hover {
+  transform: translateY(-2px);
 }
